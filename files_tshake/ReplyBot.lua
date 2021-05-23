@@ -1,6 +1,6 @@
 local function Reply(msg)
 local text = msg.content_.text_
-if not database:get(bot_id..'Tshake:Reply:Mute'..msg.chat_id_) then
+if not database:get(bot_id..'Hydra:Reply:Mute'..msg.chat_id_) then
 if text == 'هلو' then
 TextReply = '• هَٰہۧـﮧﮧلْٰاَٰوٍّ໑اَٰتّٰ 🌝☄ֆ'
 send(msg.chat_id_, msg.id_,'['..TextReply..']')
@@ -297,5 +297,5 @@ end
 
 end
 return {
-Tshake = Reply
+Hydra = Reply
 }

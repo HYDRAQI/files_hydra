@@ -1,7 +1,7 @@
 local function SehUser(msg)
 local text = msg.content_.text_
 if text == 'تفعيل صيح' and Owner(msg) then   
-database:del(bot_id..'Tshake:Seh:User'..msg.chat_id_)  
+database:del(bot_id..'Hydra:Seh:User'..msg.chat_id_)  
 send(msg.chat_id_, msg.id_,'☑┇تم تفعيل امر صيح') 
 return false
 end
@@ -12,7 +12,7 @@ return false
 end
 if text and text:match("^صيح @(.*)$") then
 local username = text:match("^صيح @(.*)$")
-if not database:get(bot_id..'Tshake:Seh:User'..msg.chat_id_) then
+if not database:get(bot_id..'Hydra:Seh:User'..msg.chat_id_) then
 function start_function(extra, result, success)
 if result and result.message_ and result.message_ == "USERNAME_NOT_OCCUPIED" then 
 send(msg.chat_id_, msg.id_,'🔘┇المعرف غلط ') 
@@ -44,5 +44,5 @@ end
 
 end
 return {
-Tshake = SehUser
+Hydra = SehUser
 }
